@@ -38,3 +38,10 @@ Small.args = {
   size: 'small',
   label: 'Button',
 };
+
+
+const AllButtons = () => { 
+
+}
+
+AllButtons.storyName = 'all buttons'

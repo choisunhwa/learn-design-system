@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+// import App from './App';
+import { CopiedApp } from './copied/CopiedApp';
 // impsort reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode> 
-    <App />
+    {/* <App /> */}
+    <CopiedApp />
   </React.StrictMode>
   , document.getElementById('root')
 );

@@ -21,4 +21,9 @@ LoggedIn.args = {
 };
 
 export const LoggedOut = Template.bind({});
-LoggedOut.args = {};
+LoggedOut.args = {
+  onLogin: () => { 
+    alert(12)
+    console.log('logIn')
+  }
+};
