@@ -1,5 +1,3 @@
-import { css } from 'styled-components';
-
 export const color = {
     primary: '#0027ff',
     hover: '#265197',

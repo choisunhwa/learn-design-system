@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import App from './App';
-import { CopiedApp } from './copied/CopiedApp';
+// import { CopiedApp } from './copied/CopiedApp';
+import Accommodate from './accommodation/Accommodate';
 // impsort reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode> 
+    <Accommodate />
     {/* <App /> */}
-    <CopiedApp />
+    {/* <CopiedApp /> */}
   </React.StrictMode>
   , document.getElementById('root')
 );

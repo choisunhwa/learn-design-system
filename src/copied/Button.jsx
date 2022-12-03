@@ -20,7 +20,16 @@ const StyledButton = Styled.button`
     background-color: blue;
     font-size: 20px;
 
-    
+    :hover{
+        background-color: ${color.hover}
+    }
+    :active{
+        background-color: ${color.pressed}
+    }
+    :disabled{
+        background-color: ${color.disabled}
+    }
+
     ${(props) => 
     props.status === 'normal' && css`
         background-color: ${color.primary};     
@@ -45,11 +54,11 @@ const StyledButton = Styled.button`
 
 `;
 
-export default function Button({status, type, ...props }) { 
+export default function Button({status, type, onClick, disabled, ...props }) { // 값을 받아옴
     // primary button
     // Normal, Hover, Pressed, Disabled
     return (
-        <StyledButton status={status} type={ type }>button</StyledButton>
+        <StyledButton status={status} type={ type } onClick={ onClick } disabled={disabled}>button</StyledButton>
     );
 }
 
