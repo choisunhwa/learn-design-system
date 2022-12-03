@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { userEvent, within } from '@storybook/testing-library';
 import { Button } from './Button';
 import { Icon } from './Icon';
 import { StoryLinkWrapper } from './StoryLinkWrapper';
@@ -22,9 +22,10 @@ export default {
   component: Button,
 };
 
+ 
 export const AllButtons = (args) => (
   <div>
-    <Button appearance="primary">Primary</Button>
+    <Button appearance="primary" onClick={()=>{alert('primary')}}>Primary</Button>
     <Button appearance="secondary">Secondary</Button>
     <Button appearance="tertiary">Tertiary</Button>
     <Button appearance="outline">Outline</Button>

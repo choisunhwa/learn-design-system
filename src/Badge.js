@@ -53,16 +53,23 @@ const BadgeWrapper = styled.div`
       color: ${color.dark};
       background: ${color.mediumlight};
     `};
+  ${props =>
+    props.status === 'custom' &&
+    css`
+      color: ${color.dark};
+      background: ${color.mediumlight};
+    `};
 `;
 
 /**
  * **Badges?!** We don't need no stinkin' badges!!
  */
 export function Badge({ ...props }) {
+  console.log(props.status)
   return <BadgeWrapper {...props} />;
 }
 Badge.propTypes = {
-  status: PropTypes.oneOf(['positive', 'negative', 'neutral', 'error', 'warning']),
+  status: PropTypes.oneOf(['positive', 'negative', 'neutral', 'error', 'warning', 'custom']),
 };
 
 Badge.defaultProps = {

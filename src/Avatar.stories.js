@@ -5,6 +5,20 @@ import { Avatar } from "./Avatar";
 export default {
   title: "Design System/Avatar",
   component: Avatar,
+  argTypes: {
+    size: {
+      control: {
+        type: 'select',
+      },
+      options: ['tiny', 'small', 'medium', 'large'],
+    },
+    username: {
+      control: {
+        type: 'select',
+      },
+      options: ['Tom Coleman', 'suna', 'summy', 'sun'],
+    },
+  }  
 };
 
 export const Standard = (args) => <Avatar {...args} />;

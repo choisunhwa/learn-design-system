@@ -5,6 +5,13 @@ import { Icon } from './Icon';
 export default {
   title: 'Design System/Badge',
   component: Badge,
+  decorators: [
+    (Story) => ( 
+      <div style={{ border: '5px solid blue' }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export const AllBadges = (args) =>(
@@ -14,6 +21,9 @@ export const AllBadges = (args) =>(
     <Badge status="neutral">Neutral</Badge>
     <Badge status="error">Error</Badge>
     <Badge status="warning">Warning</Badge>
+
+    <Badge status="custom">custom</Badge>
+    
     <Badge status="positive">
       <Icon {...args} />
       with icon
@@ -22,7 +32,8 @@ export const AllBadges = (args) =>(
 );
 AllBadges.args={
   icon:'facehappy',
-  inline:true
+  inline: true,
+  color: {color:'select'}
 }
 
 AllBadges.storyName = "all badges";
