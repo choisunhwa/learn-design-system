@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 // import App from './App';
 // import { CopiedApp } from './copied/CopiedApp';
 import Accommodate from './accommodation/Accommodate';
+import Calculator from './temperature/Calculator';
 // impsort reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode> 
+    <Calculator />
     <Accommodate />
     {/* <App /> */}
     {/* <CopiedApp /> */}

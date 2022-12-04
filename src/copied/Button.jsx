@@ -68,7 +68,7 @@ Button.propTypes = {
 
 }
 Button.defaultProps = {
-    status: 'hover',
+    status: buttonStatus[0],
     type: buttonType[0]
 
 }

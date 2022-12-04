@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import useCounter from './useCounter';
 import Button from '../copied/Button';
 import ConfirmButton from './confirmButton';
+import LogInOut from './LogInOut';
 
 const MAX_CAPACITY = 4;
 
@@ -28,6 +29,7 @@ function Accommodate(props) {
             <button onClick={decreaseCount} >퇴장</button>   
             */}
             <ConfirmButton></ConfirmButton>     
+            <LogInOut></LogInOut>     
             <Button onClick={ increaseCount } disabled={isFull} status="normal" type="Primary">입장</Button>            
             <Button onClick={decreaseCount} status="normal" type="Secondary">퇴장</Button>      
             {isFull && <p>정원이 가득찼습니다.</p>}
