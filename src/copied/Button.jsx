@@ -54,11 +54,11 @@ const StyledButton = Styled.button`
 
 `;
 
-export default function Button({status, type, onClick, disabled, ...props }) { // 값을 받아옴
+export default function Button({status, type, onClick, disabled, label, ...props }) { // 값을 받아옴
     // primary button
     // Normal, Hover, Pressed, Disabled
     return (
-        <StyledButton status={status} type={ type } onClick={ onClick } disabled={disabled}>button</StyledButton>
+        <StyledButton status={status} type={type} onClick={onClick} disabled={disabled}>{ props.children ? props.children : 'button'}</StyledButton>
     );
 }
 
