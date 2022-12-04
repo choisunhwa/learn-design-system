@@ -4,7 +4,6 @@ import { Badge } from './Badge';
 import { Button } from './stories/Button';
 // import ReactDOM from 'react-dom';
 
-
 function App() {
   const onLogin = () => { 
     console.log('click login')
@@ -19,7 +18,7 @@ function App() {
     label: 'button'
   }
   return (
-    <div className="App">
+    <div className="App" style={{border: '2px solid red', minHeight: '500px'}}>
       <Header user={{ name: 'suny' }} onLogin={ onLogin } onLogout={ onLogout }></Header>
       hellow, react!
       
@@ -28,6 +27,7 @@ function App() {
       </div>
       
       <Badge status="positive">Positive</Badge>
+
     </div>
   );
 }
