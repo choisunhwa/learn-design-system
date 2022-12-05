@@ -1,4 +1,5 @@
-import {useState, useCallback} from 'react';
+import { useState, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import ThemeContext from './ThemeContext';
 import MainContent from './MainContext';
 
@@ -24,3 +25,10 @@ function DarkOrLight(props) {
 
 
 export default DarkOrLight;
+
+DarkOrLight.propTypes = {
+    theme: PropTypes.string
+}
+DarkOrLight.defaultProps = {
+    theme: 'light'
+}
